@@ -41,7 +41,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 车票控制层
- * 公众号：马丁玩编程，回复：加群，添加马哥微信（备注：12306）获取项目资料
+
  */
 @RestController
 @RequiredArgsConstructor
@@ -60,7 +60,7 @@ public class TicketController {
     /**
      * 购买车票
      */
-    @ILog
+
     @Idempotent(
             uniqueKeyPrefix = "index12306-ticket:lock_purchase-tickets:",
             key = "T(org.opengoofy.index12306.framework.starter.bases.ApplicationContextHolder).getBean('environment').getProperty('unique-name', '')"
@@ -78,7 +78,7 @@ public class TicketController {
     /**
      * 购买车票v2
      */
-    @ILog
+
     @Idempotent(
             uniqueKeyPrefix = "index12306-ticket:lock_purchase-tickets:",
             key = "T(org.opengoofy.index12306.framework.starter.bases.ApplicationContextHolder).getBean('environment').getProperty('unique-name', '')"
@@ -96,7 +96,7 @@ public class TicketController {
     /**
      * 取消车票订单
      */
-    @ILog
+
     @PostMapping("/api/ticket-service/ticket/cancel")
     public Result<Void> cancelTicketOrder(@RequestBody CancelTicketOrderReqDTO requestParam) {
         ticketService.cancelTicketOrder(requestParam);

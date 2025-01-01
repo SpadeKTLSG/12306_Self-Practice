@@ -9,4 +9,10 @@
     </parent>
 
     <artifactId>index12306-convention-spring-boot-starter</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>
