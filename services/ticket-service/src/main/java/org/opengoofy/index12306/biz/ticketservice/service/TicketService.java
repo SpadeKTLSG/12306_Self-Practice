@@ -36,7 +36,7 @@ public interface TicketService extends IService<TicketDO> {
     TicketPageQueryRespDTO pageListTicketQueryV2(TicketPageQueryReqDTO requestParam);
 
     /**
-     * 购买车票
+     * 购买车票 简单版本
      *
      * @param requestParam 车票购买请求参数
      * @return 订单号
@@ -44,7 +44,7 @@ public interface TicketService extends IService<TicketDO> {
     TicketPurchaseRespDTO purchaseTicketsV1(@RequestBody PurchaseTicketReqDTO requestParam);
 
     /**
-     * 购买车票V2高性能版本
+     * 购买车票 高性能版本 推荐!
      *
      * @param requestParam 车票购买请求参数
      * @return 订单号
