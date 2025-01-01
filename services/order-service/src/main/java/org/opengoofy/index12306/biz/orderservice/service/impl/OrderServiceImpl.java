@@ -32,7 +32,6 @@ import org.opengoofy.index12306.biz.orderservice.mq.produce.DelayCloseOrderSendP
 import org.opengoofy.index12306.biz.orderservice.remote.UserRemoteService;
 import org.opengoofy.index12306.biz.orderservice.remote.dto.UserQueryActualRespDTO;
 import org.opengoofy.index12306.biz.orderservice.service.OrderItemService;
-import org.opengoofy.index12306.biz.orderservice.service.OrderPassengerRelationService;
 import org.opengoofy.index12306.biz.orderservice.service.OrderService;
 import org.opengoofy.index12306.biz.orderservice.service.orderid.OrderIdGeneratorManager;
 import org.opengoofy.index12306.framework.starter.common.toolkit.BeanUtil;
@@ -62,7 +61,6 @@ public class OrderServiceImpl implements OrderService {
     private final OrderMapper orderMapper;
     private final OrderItemMapper orderItemMapper;
     private final OrderItemService orderItemService;
-    private final OrderPassengerRelationService orderPassengerRelationService;
     private final RedissonClient redissonClient;
     private final DelayCloseOrderSendProduce delayCloseOrderSendProduce;
     private final UserRemoteService userRemoteService;
@@ -145,7 +143,7 @@ public class OrderServiceImpl implements OrderService {
             orderPassengerRelationDOList.add(orderPassengerRelationDO);
         });
         orderItemService.saveBatch(orderItemDOList);
-        orderPassengerRelationService.saveBatch(orderPassengerRelationDOList);
+//        orderPassengerRelationService.saveBatch(orderPassengerRelationDOList);
         try {
             // 发送 RocketMQ 延时消息，指定时间后取消订单
             DelayCloseOrderEvent delayCloseOrderEvent = DelayCloseOrderEvent.builder()
@@ -276,7 +274,8 @@ public class OrderServiceImpl implements OrderService {
         LambdaQueryWrapper<OrderItemPassengerDO> queryWrapper = Wrappers.lambdaQuery(OrderItemPassengerDO.class)
                 .eq(OrderItemPassengerDO::getIdCard, userActualResp.getData().getIdCard())
                 .orderByDesc(OrderItemPassengerDO::getCreateTime);
-        IPage<OrderItemPassengerDO> orderItemPassengerPage = orderPassengerRelationService.page(PageUtil.convert(requestParam), queryWrapper);
+//        IPage<OrderItemPassengerDO> orderItemPassengerPage = orderPassengerRelationService.page(PageUtil.convert(requestParam), queryWrapper);
+        IPage<OrderItemPassengerDO> orderItemPassengerPage = null;
         return PageUtil.convert(orderItemPassengerPage, each -> {
             LambdaQueryWrapper<OrderDO> orderQueryWrapper = Wrappers.lambdaQuery(OrderDO.class)
                     .eq(OrderDO::getOrderSn, each.getOrderSn());
