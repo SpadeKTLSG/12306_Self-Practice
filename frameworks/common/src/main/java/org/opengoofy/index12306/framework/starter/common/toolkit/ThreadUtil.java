@@ -21,7 +21,6 @@ import lombok.SneakyThrows;
 
 /**
  * 线程池工具类
-
  */
 public final class ThreadUtil {
 

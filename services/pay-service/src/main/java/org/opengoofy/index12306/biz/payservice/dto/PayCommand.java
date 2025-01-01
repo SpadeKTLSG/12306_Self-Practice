@@ -24,7 +24,6 @@ import java.math.BigDecimal;
 
 /**
  * 支付请求命令
- 
  */
 @Data
 public final class PayCommand extends AbstractPayRequest {

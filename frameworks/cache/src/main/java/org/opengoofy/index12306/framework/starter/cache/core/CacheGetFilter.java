@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.cache.core;
 
 /**
  * 缓存过滤
-
  */
 @FunctionalInterface
 public interface CacheGetFilter<T> {

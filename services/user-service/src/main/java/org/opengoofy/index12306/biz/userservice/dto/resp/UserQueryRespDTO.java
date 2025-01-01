@@ -24,7 +24,6 @@ import org.opengoofy.index12306.biz.userservice.serialize.PhoneDesensitizationSe
 
 /**
  * 用户查询返回参数
-
  */
 @Data
 public class UserQueryRespDTO {

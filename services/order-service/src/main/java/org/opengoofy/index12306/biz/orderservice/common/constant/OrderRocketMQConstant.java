@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.orderservice.common.constant;
 
 /**
  * RocketMQ 订单服务常量类
-
  */
 public final class OrderRocketMQConstant {
 

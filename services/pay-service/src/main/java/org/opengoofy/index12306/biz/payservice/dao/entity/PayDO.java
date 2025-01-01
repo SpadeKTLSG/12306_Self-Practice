@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 支付实体
-
  */
 @Data
 @TableName("t_pay")

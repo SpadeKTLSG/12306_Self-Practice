@@ -44,7 +44,6 @@ import java.util.Objects;
 
 /**
  * 支付结果回调购票消费者
- 
  */
 @Slf4j
 @Component

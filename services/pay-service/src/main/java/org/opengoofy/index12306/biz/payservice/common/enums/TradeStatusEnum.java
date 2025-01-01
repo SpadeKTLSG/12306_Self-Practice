@@ -27,7 +27,6 @@ import java.util.Optional;
 /**
  * 交易状态枚举
  * 映射不同平台状态码，最终入库的值为枚举名
-
  */
 public enum TradeStatusEnum {
 
@@ -92,16 +91,6 @@ public enum TradeStatusEnum {
     };
 
     /**
-     * 获取交易状态码
-     */
-    public abstract Integer tradeCode();
-
-    /**
-     * 获取交易状态集合
-     */
-    protected abstract List<String> tradeStatus();
-
-    /**
      * 查询真实的交易状态
      *
      * @param tradeStatus 三方交易状态
@@ -122,4 +111,14 @@ public enum TradeStatusEnum {
         Optional<TradeStatusEnum> tradeStatusEnum = Arrays.stream(TradeStatusEnum.values()).filter(each -> each.tradeStatus().contains(tradeStatus)).findFirst();
         return tradeStatusEnum.orElseThrow(() -> new ServiceException("未找到支付状态")).tradeCode();
     }
+
+    /**
+     * 获取交易状态码
+     */
+    public abstract Integer tradeCode();
+
+    /**
+     * 获取交易状态集合
+     */
+    protected abstract List<String> tradeStatus();
 }

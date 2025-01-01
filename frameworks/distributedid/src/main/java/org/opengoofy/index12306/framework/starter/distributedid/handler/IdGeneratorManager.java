@@ -28,7 +28,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * ID 生成器管理
-
  */
 public final class IdGeneratorManager {
 

@@ -37,7 +37,6 @@ import java.util.Optional;
 /**
  * 抽象列车&车票相关定时任务
  * 已通过运行时判断缓存不存在实时读取数据库获取完成，该定时任务不在主流程中
-
  */
 @Deprecated
 public abstract class AbstractTrainStationJobHandlerTemplate extends IJobHandler {

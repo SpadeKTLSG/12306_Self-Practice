@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.userservice.common.constant;
 
 /**
  * 系统级公共常量
-
  */
 public final class Index12306Constant {
 

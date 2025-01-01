@@ -27,7 +27,6 @@ import java.util.PriorityQueue;
 
 /**
  * 匹配剩余的座位工具类
- 
  */
 public final class SurplusNeedMatchSeatUtil {
 
@@ -48,8 +47,7 @@ public final class SurplusNeedMatchSeatUtil {
             List<Pair<Integer, Integer>> pairList = vacantSeatQueue.poll();
             if (result.size() + pairList.size() < chooseSeatSize) {
                 result.addAll(pairList);
-            }
-            else if (result.size() + pairList.size() >= chooseSeatSize) {
+            } else if (result.size() + pairList.size() >= chooseSeatSize) {
                 int needPairListLen = pairList.size() - (result.size() + pairList.size() - chooseSeatSize);
                 result.addAll(pairList.subList(0, needPairListLen));
                 if (result.size() == chooseSeatSize) {

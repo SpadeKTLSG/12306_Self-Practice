@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 座位状态枚举
- 
  */
 @RequiredArgsConstructor
 public enum SeatStatusEnum {

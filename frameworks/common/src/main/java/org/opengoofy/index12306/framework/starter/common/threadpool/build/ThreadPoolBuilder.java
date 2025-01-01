@@ -21,16 +21,10 @@ import org.opengoofy.index12306.framework.starter.common.toolkit.Assert;
 import org.opengoofy.index12306.framework.starter.designpattern.builder.Builder;
 
 import java.math.BigDecimal;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * 线程池 {@link ThreadPoolExecutor} 构建器, 构建者模式
-
  */
 public final class ThreadPoolBuilder implements Builder<ThreadPoolExecutor> {
 
@@ -51,6 +45,10 @@ public final class ThreadPoolBuilder implements Builder<ThreadPoolExecutor> {
     private String threadNamePrefix;
 
     private ThreadFactory threadFactory;
+
+    public static ThreadPoolBuilder builder() {
+        return new ThreadPoolBuilder();
+    }
 
     private Integer calculateCoreNum() {
         int cpuCoreNum = Runtime.getRuntime().availableProcessors();
@@ -100,10 +98,6 @@ public final class ThreadPoolBuilder implements Builder<ThreadPoolExecutor> {
     public ThreadPoolBuilder workQueue(BlockingQueue workQueue) {
         this.workQueue = workQueue;
         return this;
-    }
-
-    public static ThreadPoolBuilder builder() {
-        return new ThreadPoolBuilder();
     }
 
     @Override

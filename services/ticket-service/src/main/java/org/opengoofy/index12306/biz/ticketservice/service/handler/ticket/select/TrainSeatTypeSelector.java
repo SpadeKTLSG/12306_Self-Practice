@@ -51,7 +51,6 @@ import java.util.stream.Collectors;
 
 /**
  * 购票时列车座位选择器
- 
  */
 @Slf4j
 @Component

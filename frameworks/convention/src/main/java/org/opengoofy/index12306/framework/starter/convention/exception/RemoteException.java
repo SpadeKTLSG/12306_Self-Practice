@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.convention.errorcode.IErrorCod
 
 /**
  * 远程服务调用异常
-
  */
 public class RemoteException extends AbstractException {
 

@@ -50,18 +50,15 @@ import java.math.BigDecimal;
 
 /**
  * 阿里支付组件
-
  */
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class AliRefundNativeHandler extends AbstractRefundHandler implements AbstractExecuteStrategy<RefundRequest, RefundResponse> {
 
-    private final AliPayProperties aliPayProperties;
-
     private final static String SUCCESS_CODE = "10000";
-
     private final static String FUND_CHANGE = "Y";
+    private final AliPayProperties aliPayProperties;
 
     @Retryable(value = {ServiceException.class}, maxAttempts = 3, backoff = @Backoff(delay = 1000, multiplier = 1.5))
     @SneakyThrows(value = AlipayApiException.class)

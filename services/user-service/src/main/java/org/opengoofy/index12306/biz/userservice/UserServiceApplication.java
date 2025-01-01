@@ -23,7 +23,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 用户服务应用启动器
-
  */
 @SpringBootApplication
 @MapperScan("org.opengoofy.index12306.biz.userservice.dao.mapper")

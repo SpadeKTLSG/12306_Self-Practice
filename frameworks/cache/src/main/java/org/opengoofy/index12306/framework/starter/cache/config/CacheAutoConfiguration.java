@@ -29,7 +29,6 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 
 /**
  * 缓存配置自动装配
-
  */
 @AllArgsConstructor
 @EnableConfigurationProperties({RedisDistributedProperties.class, BloomFilterPenetrateProperties.class})

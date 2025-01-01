@@ -36,7 +36,6 @@ import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKe
 
 /**
  * 购票流程过滤器之验证列车站点库存是否充足
-
  */
 @Component
 @RequiredArgsConstructor

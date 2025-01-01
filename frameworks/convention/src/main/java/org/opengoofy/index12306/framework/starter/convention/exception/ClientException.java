@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.convention.errorcode.IErrorCod
 
 /**
  * 客户端异常
-
  */
 public class ClientException extends AbstractException {
 

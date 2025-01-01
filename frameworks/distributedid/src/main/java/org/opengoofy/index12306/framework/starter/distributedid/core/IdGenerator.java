@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.distributedid.core;
 
 /**
  * ID 生成器
- 
  */
 public interface IdGenerator {
 

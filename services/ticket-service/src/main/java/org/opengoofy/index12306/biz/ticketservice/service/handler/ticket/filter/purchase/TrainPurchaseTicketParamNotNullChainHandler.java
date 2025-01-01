@@ -28,7 +28,6 @@ import java.util.Objects;
 
 /**
  * 购票流程过滤器之验证参数必填
-
  */
 @Component
 public class TrainPurchaseTicketParamNotNullChainHandler implements TrainPurchaseTicketChainFilter<PurchaseTicketReqDTO> {

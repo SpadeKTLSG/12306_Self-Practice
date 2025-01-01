@@ -25,7 +25,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 订单服务应用启动器
-
  */
 @SpringBootApplication
 @MapperScan("org.opengoofy.index12306.biz.orderservice.dao.mapper")

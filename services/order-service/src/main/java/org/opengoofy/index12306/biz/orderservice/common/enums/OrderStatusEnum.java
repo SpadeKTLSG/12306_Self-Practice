@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 订单状态枚举
-
  */
 @Getter
 @RequiredArgsConstructor

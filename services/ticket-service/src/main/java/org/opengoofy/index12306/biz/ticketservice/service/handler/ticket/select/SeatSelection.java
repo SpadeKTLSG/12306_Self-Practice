@@ -24,7 +24,6 @@ import java.util.List;
 
 /**
  * 座位选择器
-
  */
 public class SeatSelection {
 

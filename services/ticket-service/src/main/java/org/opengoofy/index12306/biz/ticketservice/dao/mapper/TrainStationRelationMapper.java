@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.ticketservice.dao.entity.TrainStationRelatio
 
 /**
  * 列车站点关系持久层
-
  */
 public interface TrainStationRelationMapper extends BaseMapper<TrainStationRelationDO> {
 }

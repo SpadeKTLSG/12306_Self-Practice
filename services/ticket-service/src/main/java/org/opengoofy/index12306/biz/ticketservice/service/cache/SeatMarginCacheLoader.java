@@ -47,7 +47,6 @@ import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKe
 
 /**
  * 座位余量缓存加载
- 
  */
 @Component
 @RequiredArgsConstructor

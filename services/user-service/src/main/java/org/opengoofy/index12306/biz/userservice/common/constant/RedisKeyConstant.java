@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.userservice.common.constant;
 
 /**
  * Redis Key 定义常量类
-
  */
 public final class RedisKeyConstant {
 

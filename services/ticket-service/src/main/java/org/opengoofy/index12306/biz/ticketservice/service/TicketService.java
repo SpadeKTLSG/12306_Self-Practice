@@ -31,7 +31,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * 车票接口
-
  */
 public interface TicketService extends IService<TicketDO> {
 

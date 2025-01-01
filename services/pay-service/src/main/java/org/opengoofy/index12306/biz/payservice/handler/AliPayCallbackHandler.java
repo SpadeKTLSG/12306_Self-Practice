@@ -31,7 +31,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 阿里支付回调组件
- 
  */
 @Slf4j
 @Service

@@ -28,7 +28,6 @@ import java.util.Objects;
 
 /**
  * 列车标签枚举
-
  */
 @RequiredArgsConstructor
 public enum TrainBrandEnum {

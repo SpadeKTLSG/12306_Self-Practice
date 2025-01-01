@@ -27,7 +27,6 @@ import java.util.List;
 
 /**
  * 用户远程服务调用
-
  */
 @FeignClient(value = "index12306-user${unique-name:}-service", url = "${aggregation.remote-url:}")
 public interface UserRemoteService {

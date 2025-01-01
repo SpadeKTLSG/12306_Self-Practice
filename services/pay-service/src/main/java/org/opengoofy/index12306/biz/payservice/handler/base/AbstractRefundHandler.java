@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.payservice.dto.base.RefundResponse;
 
 /**
  * 抽象退款组件
- 
  */
 public abstract class AbstractRefundHandler {
 

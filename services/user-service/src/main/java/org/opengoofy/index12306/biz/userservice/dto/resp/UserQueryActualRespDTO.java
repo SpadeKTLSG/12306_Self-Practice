@@ -17,14 +17,10 @@
 
 package org.opengoofy.index12306.biz.userservice.dto.resp;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
-import org.opengoofy.index12306.biz.userservice.serialize.IdCardDesensitizationSerializer;
-import org.opengoofy.index12306.biz.userservice.serialize.PhoneDesensitizationSerializer;
 
 /**
  * 用户查询返回无脱敏参数
-
  */
 @Data
 public class UserQueryActualRespDTO {

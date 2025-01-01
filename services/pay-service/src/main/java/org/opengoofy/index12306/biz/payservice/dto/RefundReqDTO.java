@@ -25,7 +25,6 @@ import java.util.List;
 
 /**
  * 退款请求入参数实体
-
  */
 @Data
 public class RefundReqDTO {

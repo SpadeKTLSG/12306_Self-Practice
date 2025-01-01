@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 支付返回实体
-
  */
 @Data
 public final class PayRespDTO {

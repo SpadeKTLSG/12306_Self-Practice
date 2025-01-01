@@ -30,11 +30,7 @@ import org.opengoofy.index12306.biz.ticketservice.dao.mapper.TrainStationPriceMa
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 class TicketStationPriceTests {

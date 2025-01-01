@@ -27,7 +27,6 @@ import java.util.Objects;
 
 /**
  * 地区&站点类型枚举
-
  */
 @RequiredArgsConstructor
 public enum RegionStationQueryTypeEnum {

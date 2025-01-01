@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.common.enums;
 
 /**
  * 状态枚举
-
  */
 public enum StatusEnum {
 

@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 退款记录实体
-
  */
 @Data
 @TableName("t_refund")

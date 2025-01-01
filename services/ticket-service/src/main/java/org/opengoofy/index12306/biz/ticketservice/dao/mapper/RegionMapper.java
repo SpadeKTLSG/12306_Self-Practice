@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.ticketservice.dao.entity.RegionDO;
 
 /**
  * 地区持久层
-
  */
 public interface RegionMapper extends BaseMapper<RegionDO> {
 }

@@ -26,7 +26,6 @@ import java.math.BigDecimal;
 
 /**
  * 席别类型实体
- 
  */
 @Data
 @NoArgsConstructor

@@ -34,7 +34,6 @@ import java.util.UUID;
 
 /**
  * 延迟关闭订单生产者
- 
  */
 @Slf4j
 @Component

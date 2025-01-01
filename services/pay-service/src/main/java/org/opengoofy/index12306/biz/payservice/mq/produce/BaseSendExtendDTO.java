@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 消息发送事件基础扩充属性实体
-
  */
 @Data
 @NoArgsConstructor

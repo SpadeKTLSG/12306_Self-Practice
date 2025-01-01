@@ -27,7 +27,6 @@ import java.util.Objects;
 
 /**
  * 退款请求入参转换器
-
  */
 public final class RefundRequestConvert {
 

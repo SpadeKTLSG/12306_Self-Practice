@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 支付渠道枚举
- 
  */
 @RequiredArgsConstructor
 public enum PayChannelEnum {

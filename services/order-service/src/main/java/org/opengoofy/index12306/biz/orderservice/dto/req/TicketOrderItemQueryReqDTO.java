@@ -18,11 +18,11 @@
 package org.opengoofy.index12306.biz.orderservice.dto.req;
 
 import lombok.Data;
+
 import java.util.List;
 
 /**
  * 车票子订单查询
-
  */
 @Data
 public class TicketOrderItemQueryReqDTO {

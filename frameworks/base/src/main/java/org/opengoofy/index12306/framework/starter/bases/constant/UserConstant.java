@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.bases.constant;
 
 /**
  * 用户常量
-
  */
 public final class UserConstant {
 

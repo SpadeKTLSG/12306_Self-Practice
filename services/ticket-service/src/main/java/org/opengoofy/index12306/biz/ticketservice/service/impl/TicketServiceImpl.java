@@ -30,43 +30,18 @@ import com.github.benmanes.caffeine.cache.Caffeine;
 import com.google.common.collect.Lists;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.opengoofy.index12306.biz.ticketservice.common.enums.RefundTypeEnum;
-import org.opengoofy.index12306.biz.ticketservice.common.enums.SourceEnum;
-import org.opengoofy.index12306.biz.ticketservice.common.enums.TicketChainMarkEnum;
-import org.opengoofy.index12306.biz.ticketservice.common.enums.TicketStatusEnum;
-import org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleTypeEnum;
-import org.opengoofy.index12306.biz.ticketservice.dao.entity.StationDO;
-import org.opengoofy.index12306.biz.ticketservice.dao.entity.TicketDO;
-import org.opengoofy.index12306.biz.ticketservice.dao.entity.TrainDO;
-import org.opengoofy.index12306.biz.ticketservice.dao.entity.TrainStationPriceDO;
-import org.opengoofy.index12306.biz.ticketservice.dao.entity.TrainStationRelationDO;
-import org.opengoofy.index12306.biz.ticketservice.dao.mapper.StationMapper;
-import org.opengoofy.index12306.biz.ticketservice.dao.mapper.TicketMapper;
-import org.opengoofy.index12306.biz.ticketservice.dao.mapper.TrainMapper;
-import org.opengoofy.index12306.biz.ticketservice.dao.mapper.TrainStationPriceMapper;
-import org.opengoofy.index12306.biz.ticketservice.dao.mapper.TrainStationRelationMapper;
-import org.opengoofy.index12306.biz.ticketservice.dto.domain.PurchaseTicketPassengerDetailDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.domain.RouteDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.domain.SeatClassDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.domain.SeatTypeCountDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.domain.TicketListDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.req.CancelTicketOrderReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.req.PurchaseTicketReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.req.RefundTicketReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.req.TicketOrderItemQueryReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.dto.req.TicketPageQueryReqDTO;
+import org.opengoofy.index12306.biz.ticketservice.common.enums.*;
+import org.opengoofy.index12306.biz.ticketservice.dao.entity.*;
+import org.opengoofy.index12306.biz.ticketservice.dao.mapper.*;
+import org.opengoofy.index12306.biz.ticketservice.dto.domain.*;
+import org.opengoofy.index12306.biz.ticketservice.dto.req.*;
 import org.opengoofy.index12306.biz.ticketservice.dto.resp.RefundTicketRespDTO;
 import org.opengoofy.index12306.biz.ticketservice.dto.resp.TicketOrderDetailRespDTO;
 import org.opengoofy.index12306.biz.ticketservice.dto.resp.TicketPageQueryRespDTO;
 import org.opengoofy.index12306.biz.ticketservice.dto.resp.TicketPurchaseRespDTO;
 import org.opengoofy.index12306.biz.ticketservice.remote.PayRemoteService;
 import org.opengoofy.index12306.biz.ticketservice.remote.TicketOrderRemoteService;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.PayInfoRespDTO;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.RefundReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.RefundRespDTO;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.TicketOrderCreateRemoteReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.TicketOrderItemCreateRemoteReqDTO;
-import org.opengoofy.index12306.biz.ticketservice.remote.dto.TicketOrderPassengerDetailRespDTO;
+import org.opengoofy.index12306.biz.ticketservice.remote.dto.*;
 import org.opengoofy.index12306.biz.ticketservice.service.SeatService;
 import org.opengoofy.index12306.biz.ticketservice.service.TicketService;
 import org.opengoofy.index12306.biz.ticketservice.service.TrainStationService;
@@ -97,15 +72,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -113,21 +80,11 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 import static org.opengoofy.index12306.biz.ticketservice.common.constant.Index12306Constant.ADVANCE_TICKET_DAY;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.LOCK_PURCHASE_TICKETS;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.LOCK_PURCHASE_TICKETS_V2;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.LOCK_REGION_TRAIN_STATION;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.LOCK_REGION_TRAIN_STATION_MAPPING;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.LOCK_TOKEN_BUCKET_ISNULL;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.REGION_TRAIN_STATION;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.REGION_TRAIN_STATION_MAPPING;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.TRAIN_INFO;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.TRAIN_STATION_PRICE;
-import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.TRAIN_STATION_REMAINING_TICKET;
+import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKeyConstant.*;
 import static org.opengoofy.index12306.biz.ticketservice.toolkit.DateUtil.convertDateToLocalTime;
 
 /**
  * 车票接口实现
-
  */
 @Slf4j
 @Service
@@ -151,8 +108,14 @@ public class TicketServiceImpl extends ServiceImpl<TicketMapper, TicketDO> imple
     private final RedissonClient redissonClient;
     private final ConfigurableEnvironment environment;
     private final TicketAvailabilityTokenBucket ticketAvailabilityTokenBucket;
+    private final Cache<String, ReentrantLock> localLockMap = Caffeine.newBuilder()
+            .expireAfterWrite(1, TimeUnit.DAYS)
+            .build();
+    private final Cache<String, Object> tokenTicketsRefreshMap = Caffeine.newBuilder()
+            .expireAfterWrite(10, TimeUnit.MINUTES)
+            .build();
+    private final ScheduledExecutorService tokenIsNullRefreshExecutor = Executors.newScheduledThreadPool(1);
     private TicketService ticketService;
-
     @Value("${ticket.availability.cache-update.type:}")
     private String ticketAvailabilityCacheUpdateType;
     @Value("${framework.cache.redis.prefix:}")
@@ -362,14 +325,6 @@ public class TicketServiceImpl extends ServiceImpl<TicketMapper, TicketDO> imple
             lock.unlock();
         }
     }
-
-    private final Cache<String, ReentrantLock> localLockMap = Caffeine.newBuilder()
-            .expireAfterWrite(1, TimeUnit.DAYS)
-            .build();
-
-    private final Cache<String, Object> tokenTicketsRefreshMap = Caffeine.newBuilder()
-            .expireAfterWrite(10, TimeUnit.MINUTES)
-            .build();
 
     @Override
     public TicketPurchaseRespDTO purchaseTicketsV2(PurchaseTicketReqDTO requestParam) {
@@ -624,8 +579,6 @@ public class TicketServiceImpl extends ServiceImpl<TicketMapper, TicketDO> imple
         }
         return trainBrandSet.stream().toList();
     }
-
-    private final ScheduledExecutorService tokenIsNullRefreshExecutor = Executors.newScheduledThreadPool(1);
 
     private void tokenIsNullRefreshToken(PurchaseTicketReqDTO requestParam, TokenResultDTO tokenResult) {
         RLock lock = redissonClient.getLock(String.format(LOCK_TOKEN_BUCKET_ISNULL, requestParam.getTrainId()));

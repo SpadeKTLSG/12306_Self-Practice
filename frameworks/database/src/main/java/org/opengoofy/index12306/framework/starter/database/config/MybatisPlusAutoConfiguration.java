@@ -28,7 +28,6 @@ import org.springframework.context.annotation.Primary;
 
 /**
  * MybatisPlus 配置文件
- 
  */
 public class MybatisPlusAutoConfiguration {
 

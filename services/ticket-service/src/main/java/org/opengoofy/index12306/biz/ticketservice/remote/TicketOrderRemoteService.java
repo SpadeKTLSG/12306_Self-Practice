@@ -29,11 +29,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
 /**
  * 车票订单远程服务调用
-
  */
 @FeignClient(value = "index12306-order${unique-name:}-service", url = "${aggregation.remote-url:}")
 public interface TicketOrderRemoteService {

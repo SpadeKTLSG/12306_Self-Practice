@@ -24,7 +24,6 @@ import java.util.Date;
 
 /**
  * 乘车人返回参数
- 
  */
 @Data
 public class PassengerRespDTO {

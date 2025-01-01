@@ -25,7 +25,6 @@ import java.util.List;
 
 /**
  * 高铁座位基础信息
-
  */
 @Builder
 @Data

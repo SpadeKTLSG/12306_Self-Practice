@@ -25,7 +25,6 @@ import java.util.Map;
 
 /**
  * 断言工具类
- 
  */
 public class Assert {
 

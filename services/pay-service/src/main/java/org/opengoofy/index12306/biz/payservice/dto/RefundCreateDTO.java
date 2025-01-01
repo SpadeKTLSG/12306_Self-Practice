@@ -24,7 +24,6 @@ import java.util.List;
 
 /**
  * 退款创建入参数实体
- 
  */
 @Data
 public class RefundCreateDTO {

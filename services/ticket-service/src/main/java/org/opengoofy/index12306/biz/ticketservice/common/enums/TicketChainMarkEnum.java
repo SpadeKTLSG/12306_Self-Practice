@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.ticketservice.common.enums;
 
 /**
  * 购票相关责任链 Mark 枚举
- 
  */
 public enum TicketChainMarkEnum {
 

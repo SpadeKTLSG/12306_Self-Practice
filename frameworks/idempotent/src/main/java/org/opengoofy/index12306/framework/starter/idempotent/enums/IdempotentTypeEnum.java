@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.idempotent.enums;
 
 /**
  * 幂等验证类型枚举
-
  */
 public enum IdempotentTypeEnum {
 

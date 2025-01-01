@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.ticketservice.common.constant;
 
 /**
  * RocketMQ 购票服务常量类
- 
  */
 public final class TicketRocketMQConstant {
 

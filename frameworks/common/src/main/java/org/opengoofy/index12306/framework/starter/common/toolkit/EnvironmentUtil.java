@@ -25,7 +25,6 @@ import java.util.List;
 
 /**
  * 环境工具类
-
  */
 public class EnvironmentUtil {
 

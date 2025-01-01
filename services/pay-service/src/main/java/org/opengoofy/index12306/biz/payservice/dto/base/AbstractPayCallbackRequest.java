@@ -22,7 +22,6 @@ import lombok.Setter;
 
 /**
  * 抽象支付回调入参实体
-
  */
 public abstract class AbstractPayCallbackRequest implements PayCallbackRequest {
 

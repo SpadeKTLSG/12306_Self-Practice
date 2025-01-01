@@ -38,29 +38,34 @@ import org.opengoofy.index12306.biz.ticketservice.toolkit.SeatNumberUtil;
 import org.opengoofy.index12306.framework.starter.convention.exception.ServiceException;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.opengoofy.index12306.biz.ticketservice.service.handler.ticket.base.BitMapCheckSeatStatusFactory.TRAIN_BUSINESS;
 
 /**
  * 高铁商务座购票组件
-
  */
 @Component
 @RequiredArgsConstructor
 public class TrainBusinessClassPurchaseTicketHandler extends AbstractTrainPurchaseTicketTemplate {
 
+    private static final Map<Character, Integer> SEAT_Y_INT = Map.of('A', 0, 'C', 1, 'F', 2);
     private final SeatService seatService;
 
-    private static final Map<Character, Integer> SEAT_Y_INT = Map.of('A', 0, 'C', 1, 'F', 2);
+    public static int[][] mergeArrays(int[][] array1, int[][] array2) {
+        List<int[]> list = new ArrayList<>(Arrays.asList(array1));
+        list.addAll(Arrays.asList(array2));
+        return list.toArray(new int[0][]);
+    }
+
+    public static int[][] deepCopy(int[][] originalArray) {
+        int[][] copy = new int[originalArray.length][originalArray[0].length];
+        for (int i = 0; i < originalArray.length; i++) {
+            System.arraycopy(originalArray[i], 0, copy[i], 0, originalArray[i].length);
+        }
+        return copy;
+    }
 
     @Override
     public String mark() {
@@ -457,19 +462,5 @@ public class TrainBusinessClassPurchaseTicketHandler extends AbstractTrainPurcha
             }
         }
         return actualResult;
-    }
-
-    public static int[][] mergeArrays(int[][] array1, int[][] array2) {
-        List<int[]> list = new ArrayList<>(Arrays.asList(array1));
-        list.addAll(Arrays.asList(array2));
-        return list.toArray(new int[0][]);
-    }
-
-    public static int[][] deepCopy(int[][] originalArray) {
-        int[][] copy = new int[originalArray.length][originalArray[0].length];
-        for (int i = 0; i < originalArray.length; i++) {
-            System.arraycopy(originalArray[i], 0, copy[i], 0, originalArray[i].length);
-        }
-        return copy;
     }
 }

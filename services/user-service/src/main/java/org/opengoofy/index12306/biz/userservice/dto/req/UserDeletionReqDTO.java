@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 用户注销请求参数
-
  */
 @Data
 public class UserDeletionReqDTO {

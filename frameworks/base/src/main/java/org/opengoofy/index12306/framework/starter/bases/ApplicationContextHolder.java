@@ -26,16 +26,10 @@ import java.util.Map;
 
 /**
  * Application context holder.
- 
  */
 public class ApplicationContextHolder implements ApplicationContextAware {
 
     private static ApplicationContext CONTEXT;
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        ApplicationContextHolder.CONTEXT = applicationContext;
-    }
 
     /**
      * Get ioc container bean by type.
@@ -77,5 +71,10 @@ public class ApplicationContextHolder implements ApplicationContextAware {
      */
     public static ApplicationContext getInstance() {
         return CONTEXT;
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        ApplicationContextHolder.CONTEXT = applicationContext;
     }
 }

@@ -27,7 +27,6 @@ import org.springframework.retry.annotation.EnableRetry;
 
 /**
  * 12306 聚合服务应用启动器
-
  */
 @EnableDynamicThreadPool
 @SpringBootApplication(scanBasePackages = {

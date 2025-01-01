@@ -29,7 +29,6 @@ import java.util.Optional;
 
 /**
  * RocketMQ 抽象公共发送消息组件
-
  */
 @Slf4j
 @RequiredArgsConstructor

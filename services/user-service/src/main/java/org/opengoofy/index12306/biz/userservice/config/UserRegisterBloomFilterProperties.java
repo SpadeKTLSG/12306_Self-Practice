@@ -22,7 +22,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 用户注册布隆过滤器属性配置
-
  */
 @Data
 @ConfigurationProperties(prefix = UserRegisterBloomFilterProperties.PREFIX)

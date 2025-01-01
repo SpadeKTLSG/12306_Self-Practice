@@ -26,7 +26,6 @@ import java.util.Date;
 
 /**
  * 支付单回调请求参数
-
  */
 @Data
 @NoArgsConstructor

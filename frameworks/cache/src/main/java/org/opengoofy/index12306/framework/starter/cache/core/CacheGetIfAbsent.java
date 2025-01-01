@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.cache.core;
 
 /**
  * 缓存查询为空
-
  */
 @FunctionalInterface
 public interface CacheGetIfAbsent<T> {

@@ -29,7 +29,6 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * Web 组件自动装配
-
  */
 public class WebAutoConfiguration {
 

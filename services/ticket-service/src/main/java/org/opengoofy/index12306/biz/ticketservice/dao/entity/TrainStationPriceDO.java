@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 列车站点价格实体
-
  */
 @Data
 @TableName("t_train_station_price")

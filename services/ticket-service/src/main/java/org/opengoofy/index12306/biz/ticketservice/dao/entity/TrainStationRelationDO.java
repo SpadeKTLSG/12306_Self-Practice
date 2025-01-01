@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 列车站点关系实体
- 
  */
 @Data
 @TableName("t_train_station_relation")

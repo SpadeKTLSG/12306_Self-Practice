@@ -26,7 +26,6 @@ import java.util.Date;
 
 /**
  * 支付回调请求命令
-
  */
 @Data
 public final class PayCallbackCommand extends AbstractPayRequest {

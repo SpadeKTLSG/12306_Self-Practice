@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 车票订单详情创建请求参数
-
  */
 @Data
 public class TicketOrderItemCreateReqDTO {

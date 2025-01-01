@@ -17,11 +17,7 @@
 
 package org.opengoofy.index12306.frameworks.starter.user.core;
 
-import jakarta.servlet.Filter;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import org.opengoofy.index12306.framework.starter.bases.constant.UserConstant;
 import org.springframework.util.StringUtils;
@@ -33,7 +29,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**
  * 用户信息传输过滤器
-
  */
 public class UserTransmitFilter implements Filter {
 

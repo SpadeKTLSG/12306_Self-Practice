@@ -26,7 +26,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 车票实体
- 
  */
 @Data
 @NoArgsConstructor

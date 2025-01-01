@@ -24,7 +24,6 @@ import java.util.Map;
 
 /**
  * Canal Binlog 监听触发时间
-
  */
 @Data
 public class CanalBinlogEvent {

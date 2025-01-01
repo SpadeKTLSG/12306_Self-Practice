@@ -17,19 +17,13 @@
 
 package org.opengoofy.index12306.biz.orderservice.mq.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.UUID;
 
 /**
  * 消息体包装器
- 
  */
 @Data
 @Builder

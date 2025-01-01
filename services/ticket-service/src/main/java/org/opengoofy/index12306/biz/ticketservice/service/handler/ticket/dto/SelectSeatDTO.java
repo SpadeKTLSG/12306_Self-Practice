@@ -28,7 +28,6 @@ import java.util.List;
 
 /**
  * 选择座位实体
- 
  */
 @Data
 @NoArgsConstructor

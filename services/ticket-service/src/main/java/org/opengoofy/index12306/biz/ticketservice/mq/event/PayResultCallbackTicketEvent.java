@@ -26,7 +26,6 @@ import java.util.Date;
 
 /**
  * 支付结果回调购票服务事件
-
  */
 @Data
 @NoArgsConstructor

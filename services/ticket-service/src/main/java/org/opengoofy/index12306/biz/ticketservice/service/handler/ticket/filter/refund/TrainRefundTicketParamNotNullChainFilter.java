@@ -26,7 +26,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 列车车票退款流程过滤器之验证数据是否为空或空的字符串
-
  */
 @Component
 public class TrainRefundTicketParamNotNullChainFilter implements TrainRefundTicketChainFilter<RefundTicketReqDTO> {

@@ -21,7 +21,6 @@ import static org.opengoofy.index12306.biz.userservice.common.constant.Index1230
 
 /**
  * 用户名可复用工具类
- 
  */
 public final class UserReuseUtil {
 

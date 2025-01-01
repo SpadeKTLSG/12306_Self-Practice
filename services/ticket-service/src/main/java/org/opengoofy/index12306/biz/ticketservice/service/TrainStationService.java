@@ -24,7 +24,6 @@ import java.util.List;
 
 /**
  * 列车站点接口层
- 
  */
 public interface TrainStationService {
 

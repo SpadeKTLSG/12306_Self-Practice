@@ -30,7 +30,6 @@ import java.util.regex.Pattern;
 
 /**
  * 策略选择器
-
  */
 public class AbstractStrategyChoose implements ApplicationListener<ApplicationInitializingEvent> {
 

@@ -44,7 +44,6 @@ import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKe
 
 /**
  * 座位接口层实现
-
  */
 @Service
 @RequiredArgsConstructor

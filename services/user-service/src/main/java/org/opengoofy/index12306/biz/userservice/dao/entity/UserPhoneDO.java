@@ -26,7 +26,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 用户手机号实体对象
-
  */
 @Data
 @NoArgsConstructor

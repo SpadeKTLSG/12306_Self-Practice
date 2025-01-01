@@ -34,7 +34,6 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * 幂等自动装配
-
  */
 @EnableConfigurationProperties(IdempotentProperties.class)
 public class IdempotentAutoConfiguration {

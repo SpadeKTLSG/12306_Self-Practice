@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.orderservice.dao.entity.OrderDO;
 
 /**
  * 订单持久层
-
  */
 public interface OrderMapper extends BaseMapper<OrderDO> {
 }

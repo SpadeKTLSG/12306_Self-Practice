@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 地区&站点分页查询响应参数
-
  */
 @Data
 public class RegionStationQueryRespDTO {

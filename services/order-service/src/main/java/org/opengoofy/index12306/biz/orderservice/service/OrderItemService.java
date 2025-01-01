@@ -22,11 +22,11 @@ import org.opengoofy.index12306.biz.orderservice.dao.entity.OrderItemDO;
 import org.opengoofy.index12306.biz.orderservice.dto.domain.OrderItemStatusReversalDTO;
 import org.opengoofy.index12306.biz.orderservice.dto.req.TicketOrderItemQueryReqDTO;
 import org.opengoofy.index12306.biz.orderservice.dto.resp.TicketOrderPassengerDetailRespDTO;
+
 import java.util.List;
 
 /**
  * 订单明细接口层
-
  */
 public interface OrderItemService extends IService<OrderItemDO> {
 

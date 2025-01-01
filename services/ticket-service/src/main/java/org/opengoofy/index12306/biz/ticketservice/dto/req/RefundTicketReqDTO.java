@@ -23,7 +23,6 @@ import java.util.List;
 
 /**
  * 车票退款请求入参数实体
-
  */
 @Data
 public class RefundTicketReqDTO {

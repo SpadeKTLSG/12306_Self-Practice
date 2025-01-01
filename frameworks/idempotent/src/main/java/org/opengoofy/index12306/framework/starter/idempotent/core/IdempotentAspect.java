@@ -27,10 +27,15 @@ import java.lang.reflect.Method;
 
 /**
  * 幂等注解 AOP 拦截器
- 
  */
 @Aspect
 public final class IdempotentAspect {
+
+    public static Idempotent getIdempotent(ProceedingJoinPoint joinPoint) throws NoSuchMethodException {
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+        Method targetMethod = joinPoint.getTarget().getClass().getDeclaredMethod(methodSignature.getName(), methodSignature.getMethod().getParameterTypes());
+        return targetMethod.getAnnotation(Idempotent.class);
+    }
 
     /**
      * 增强方法标记 {@link Idempotent} 注解逻辑
@@ -62,11 +67,5 @@ public final class IdempotentAspect {
             IdempotentContext.clean();
         }
         return resultObj;
-    }
-
-    public static Idempotent getIdempotent(ProceedingJoinPoint joinPoint) throws NoSuchMethodException {
-        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
-        Method targetMethod = joinPoint.getTarget().getClass().getDeclaredMethod(methodSignature.getName(), methodSignature.getMethod().getParameterTypes());
-        return targetMethod.getAnnotation(Idempotent.class);
     }
 }

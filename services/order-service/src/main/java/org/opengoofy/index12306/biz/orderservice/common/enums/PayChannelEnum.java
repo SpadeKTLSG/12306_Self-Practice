@@ -20,12 +20,8 @@ package org.opengoofy.index12306.biz.orderservice.common.enums;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Arrays;
-import java.util.Objects;
-
 /**
  * 支付渠道枚举
- 
  */
 @RequiredArgsConstructor
 public enum PayChannelEnum {

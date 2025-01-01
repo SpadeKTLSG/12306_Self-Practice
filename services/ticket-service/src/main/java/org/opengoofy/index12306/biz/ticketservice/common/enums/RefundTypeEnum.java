@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 退款类型枚举
-
  */
 @Getter
 @RequiredArgsConstructor

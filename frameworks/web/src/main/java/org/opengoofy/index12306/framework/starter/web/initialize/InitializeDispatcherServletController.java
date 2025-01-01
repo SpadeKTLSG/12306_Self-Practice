@@ -25,7 +25,6 @@ import static org.opengoofy.index12306.framework.starter.web.config.WebAutoConfi
 
 /**
  * 初始化 {@link org.springframework.web.servlet.DispatcherServlet}
- 
  */
 @Slf4j(topic = "Initialize DispatcherServlet")
 @RestController

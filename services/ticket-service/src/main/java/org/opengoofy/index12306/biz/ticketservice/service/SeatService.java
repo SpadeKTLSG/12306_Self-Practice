@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * 座位接口层
-
  */
 public interface SeatService extends IService<SeatDO> {
 

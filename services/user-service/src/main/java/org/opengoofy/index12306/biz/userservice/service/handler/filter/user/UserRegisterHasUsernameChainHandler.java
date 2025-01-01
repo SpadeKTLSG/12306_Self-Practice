@@ -26,7 +26,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 用户注册用户名唯一检验
-
  */
 @Component
 @RequiredArgsConstructor

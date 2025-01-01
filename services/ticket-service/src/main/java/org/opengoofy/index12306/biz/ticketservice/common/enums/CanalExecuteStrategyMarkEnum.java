@@ -27,7 +27,6 @@ import java.util.regex.Pattern;
 
 /**
  * Canal 执行策略标记枚举
-
  */
 @RequiredArgsConstructor
 public enum CanalExecuteStrategyMarkEnum {

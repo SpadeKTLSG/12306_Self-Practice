@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.payservice.common.constant;
 
 /**
  * RocketMQ 支付服务常量类
- 
  */
 public final class PayRocketMQConstant {
 

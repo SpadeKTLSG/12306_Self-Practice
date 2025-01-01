@@ -30,16 +30,13 @@ import java.util.Properties;
 
 /**
  * 订单表相关复合分片算法配置
-
  */
 public class OrderCommonTableComplexAlgorithm implements ComplexKeysShardingAlgorithm {
 
+    private static final String SHARDING_COUNT_KEY = "sharding-count";
     @Getter
     private Properties props;
-
     private int shardingCount;
-
-    private static final String SHARDING_COUNT_KEY = "sharding-count";
 
     @Override
     public Collection<String> doSharding(Collection availableTargetNames, ComplexKeysShardingValue shardingValue) {

@@ -23,7 +23,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 订单明细状态枚举
-
  */
 @ContainerEnum(namespace = "OrderItemStatusEnum", key = "status", value = "statusName")
 @RequiredArgsConstructor

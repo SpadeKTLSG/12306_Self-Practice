@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 购票来源
-
  */
 @RequiredArgsConstructor
 public enum SourceEnum {

@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * 乘车人接口层
-
  */
 public interface PassengerService {
 

@@ -27,7 +27,6 @@ import java.util.List;
 
 /**
  * 车票分页查询响应参数
-
  */
 @Data
 @Builder

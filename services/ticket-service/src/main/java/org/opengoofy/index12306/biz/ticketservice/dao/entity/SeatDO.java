@@ -26,7 +26,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 座位实体
-
  */
 @Data
 @TableName("t_seat")

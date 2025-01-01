@@ -28,7 +28,6 @@ import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentTyp
 
 /**
  * 幂等参数包装
-
  */
 @Data
 @Builder

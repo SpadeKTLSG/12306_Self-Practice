@@ -28,7 +28,6 @@ import static org.opengoofy.index12306.framework.starter.web.config.WebAutoConfi
 
 /**
  * 通过 {@link InitializeDispatcherServletController} 初始化 {@link DispatcherServlet}
-
  */
 @RequiredArgsConstructor
 public final class InitializeDispatcherServletHandler implements CommandLineRunner {

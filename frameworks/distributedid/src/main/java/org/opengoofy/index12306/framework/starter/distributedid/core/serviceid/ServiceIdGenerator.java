@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.distributedid.core.snowflake.S
 
 /**
  * 业务 ID 生成器
-
  */
 public interface ServiceIdGenerator extends IdGenerator {
 

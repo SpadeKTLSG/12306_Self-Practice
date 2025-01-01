@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * 车票购买返回参数
- 
  */
 @Data
 @AllArgsConstructor

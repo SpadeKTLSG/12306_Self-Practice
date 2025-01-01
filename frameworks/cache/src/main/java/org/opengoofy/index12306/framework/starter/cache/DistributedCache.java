@@ -17,8 +17,8 @@
 
 package org.opengoofy.index12306.framework.starter.cache;
 
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import org.opengoofy.index12306.framework.starter.cache.core.CacheGetFilter;
 import org.opengoofy.index12306.framework.starter.cache.core.CacheGetIfAbsent;
 import org.opengoofy.index12306.framework.starter.cache.core.CacheLoader;
@@ -28,7 +28,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 分布式缓存
-
  */
 public interface DistributedCache extends Cache {
 

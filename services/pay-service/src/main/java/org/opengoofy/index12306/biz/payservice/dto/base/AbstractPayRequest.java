@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.distributedid.toolkit.Snowflak
 
 /**
  * 抽象支付入参实体
-
  */
 public abstract class AbstractPayRequest implements PayRequest {
 

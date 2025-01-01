@@ -24,7 +24,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 分布式缓存配置
-
  */
 @Data
 @ConfigurationProperties(prefix = RedisDistributedProperties.PREFIX)

@@ -29,15 +29,14 @@ import java.util.Optional;
 
 /**
  * 订单 ID 全局唯一生成器管理
- 
  */
 @Component
 @RequiredArgsConstructor
 public final class OrderIdGeneratorManager implements InitializingBean {
 
+    private static DistributedIdGenerator DISTRIBUTED_ID_GENERATOR;
     private final RedissonClient redissonClient;
     private final DistributedCache distributedCache;
-    private static DistributedIdGenerator DISTRIBUTED_ID_GENERATOR;
 
     /**
      * 生成订单全局唯一 ID

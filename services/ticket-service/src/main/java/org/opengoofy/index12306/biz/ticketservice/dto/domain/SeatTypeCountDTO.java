@@ -23,7 +23,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 座位类型和座位数量实体
-
  */
 @Data
 @NoArgsConstructor

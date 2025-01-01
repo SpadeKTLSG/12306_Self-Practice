@@ -44,21 +44,19 @@ import static org.opengoofy.index12306.biz.ticketservice.common.constant.RedisKe
 
 /**
  * 查询列车车票流程过滤器之验证数据是否正确
-
  */
 @Component
 @RequiredArgsConstructor
 public class TrainTicketQueryParamVerifyChainFilter implements TrainTicketQueryChainFilter<TicketPageQueryReqDTO> {
 
-    private final RegionMapper regionMapper;
-    private final StationMapper stationMapper;
-    private final DistributedCache distributedCache;
-    private final RedissonClient redissonClient;
-
     /**
      * 缓存数据为空并且已经加载过标识
      */
     private static boolean CACHE_DATA_ISNULL_AND_LOAD_FLAG = false;
+    private final RegionMapper regionMapper;
+    private final StationMapper stationMapper;
+    private final DistributedCache distributedCache;
+    private final RedissonClient redissonClient;
 
     @Override
     public void handler(TicketPageQueryReqDTO requestParam) {

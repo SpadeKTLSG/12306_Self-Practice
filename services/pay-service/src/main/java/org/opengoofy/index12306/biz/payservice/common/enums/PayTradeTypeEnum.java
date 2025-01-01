@@ -25,7 +25,6 @@ import java.util.Objects;
 
 /**
  * 交易环境枚举
-
  */
 @RequiredArgsConstructor
 public enum PayTradeTypeEnum {

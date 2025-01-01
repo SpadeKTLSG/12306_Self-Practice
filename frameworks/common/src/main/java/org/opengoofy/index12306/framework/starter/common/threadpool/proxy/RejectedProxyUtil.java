@@ -30,7 +30,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 拒绝策略代理工具类
-
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class RejectedProxyUtil {

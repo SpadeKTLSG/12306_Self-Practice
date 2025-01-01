@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 元数据处理器
- 
  */
 public class MyMetaObjectHandler implements MetaObjectHandler {
 

@@ -25,7 +25,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 用户名复用表实体
-
  */
 @Data
 @NoArgsConstructor

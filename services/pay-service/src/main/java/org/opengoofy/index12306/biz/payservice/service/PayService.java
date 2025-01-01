@@ -17,16 +17,11 @@
 
 package org.opengoofy.index12306.biz.payservice.service;
 
-import org.opengoofy.index12306.biz.payservice.dto.PayCallbackReqDTO;
-import org.opengoofy.index12306.biz.payservice.dto.PayInfoRespDTO;
-import org.opengoofy.index12306.biz.payservice.dto.PayRespDTO;
-import org.opengoofy.index12306.biz.payservice.dto.RefundReqDTO;
-import org.opengoofy.index12306.biz.payservice.dto.RefundRespDTO;
+import org.opengoofy.index12306.biz.payservice.dto.*;
 import org.opengoofy.index12306.biz.payservice.dto.base.PayRequest;
 
 /**
  * 支付接口层
-
  */
 public interface PayService {
 

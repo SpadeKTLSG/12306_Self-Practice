@@ -27,7 +27,6 @@ import java.util.Date;
 
 /**
  * 列车站点实体
- 
  */
 @Data
 @TableName("t_train_station")

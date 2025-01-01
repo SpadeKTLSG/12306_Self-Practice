@@ -21,7 +21,6 @@ import java.math.BigDecimal;
 
 /**
  * 支付入参接口
-
  */
 public interface PayRequest {
 

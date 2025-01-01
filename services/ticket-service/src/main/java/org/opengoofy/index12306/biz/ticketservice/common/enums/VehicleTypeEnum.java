@@ -25,20 +25,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.BUSINESS_CLASS;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.FIRST_CLASS;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.FIRST_SLEEPER;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.HARD_SEAT;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.HARD_SLEEPER;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.NO_SEAT_SLEEPER;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.SECOND_CLASS;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.SECOND_CLASS_CABIN_SEAT;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.SECOND_SLEEPER;
-import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.SOFT_SLEEPER;
+import static org.opengoofy.index12306.biz.ticketservice.common.enums.VehicleSeatTypeEnum.*;
 
 /**
  * 交通工具类型
- 
  */
 @RequiredArgsConstructor
 public enum VehicleTypeEnum {

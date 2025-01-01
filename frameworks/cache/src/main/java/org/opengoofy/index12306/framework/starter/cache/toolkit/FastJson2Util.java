@@ -23,7 +23,6 @@ import java.lang.reflect.Type;
 
 /**
  * FastJson2 工具类
-
  */
 public final class FastJson2Util {
 

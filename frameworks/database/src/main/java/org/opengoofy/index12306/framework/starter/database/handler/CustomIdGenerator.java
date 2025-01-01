@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.distributedid.toolkit.Snowflak
 
 /**
  * 自定义雪花算法生成器
- 
  */
 public class CustomIdGenerator implements IdentifierGenerator {
 

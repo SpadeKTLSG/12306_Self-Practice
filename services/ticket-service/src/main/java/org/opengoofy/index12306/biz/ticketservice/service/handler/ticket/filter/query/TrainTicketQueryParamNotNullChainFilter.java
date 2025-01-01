@@ -24,7 +24,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 查询列车车票流程过滤器之验证数据是否为空或空的字符串
-
  */
 @Component
 public class TrainTicketQueryParamNotNullChainFilter implements TrainTicketQueryChainFilter<TicketPageQueryReqDTO> {

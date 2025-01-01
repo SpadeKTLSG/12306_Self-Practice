@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.payservice.dto.base.PayResponse;
 
 /**
  * 抽象支付组件
-
  */
 public abstract class AbstractPayHandler {
 

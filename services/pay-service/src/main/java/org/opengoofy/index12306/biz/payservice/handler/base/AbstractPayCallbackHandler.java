@@ -21,7 +21,6 @@ import org.opengoofy.index12306.biz.payservice.dto.base.PayCallbackRequest;
 
 /**
  * 抽象支付回调组件
-
  */
 public abstract class AbstractPayCallbackHandler {
 

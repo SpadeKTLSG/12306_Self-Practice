@@ -25,7 +25,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 用户注册检查证件号是否多次注销
-
  */
 @Component
 @RequiredArgsConstructor

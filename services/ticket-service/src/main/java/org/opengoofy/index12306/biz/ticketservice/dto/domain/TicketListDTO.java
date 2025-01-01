@@ -23,7 +23,6 @@ import java.util.List;
 
 /**
  * 车次集合实体
-
  */
 @Data
 public class TicketListDTO {

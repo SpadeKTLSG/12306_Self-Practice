@@ -20,15 +20,10 @@ package org.opengoofy.index12306.framework.starter.idempotent.annotation;
 import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentSceneEnum;
 import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentTypeEnum;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * 幂等注解
-
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

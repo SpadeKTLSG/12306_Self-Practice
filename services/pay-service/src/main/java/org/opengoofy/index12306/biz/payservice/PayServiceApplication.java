@@ -25,7 +25,6 @@ import org.springframework.retry.annotation.EnableRetry;
 
 /**
  * 支付服务应用启动器
- 
  */
 @SpringBootApplication
 @MapperScan("org.opengoofy.index12306.biz.payservice.dao.mapper")

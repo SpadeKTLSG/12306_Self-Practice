@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 乘车人添加&修改请求参数
-
  */
 @Data
 public class PassengerReqDTO {

@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.payservice.service.payid;
 
 /**
  * 全局唯一订单号生成器
-
  */
 public class DistributedIdGenerator {
 

@@ -26,7 +26,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 订单明细数据库实体
-
  */
 @Data
 @TableName("t_order_item")

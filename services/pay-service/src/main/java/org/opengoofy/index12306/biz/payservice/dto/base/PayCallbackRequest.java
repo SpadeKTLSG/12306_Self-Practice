@@ -19,7 +19,6 @@ package org.opengoofy.index12306.biz.payservice.dto.base;
 
 /**
  * 支付回调请求入参
-
  */
 public interface PayCallbackRequest {
 

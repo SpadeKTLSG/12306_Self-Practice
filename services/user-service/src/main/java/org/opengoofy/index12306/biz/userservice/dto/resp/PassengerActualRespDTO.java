@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 乘车人真实返回参数，不包含脱敏信息
-
  */
 @Data
 @Accessors(chain = true)

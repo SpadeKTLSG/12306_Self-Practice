@@ -21,7 +21,6 @@ import org.springframework.core.Ordered;
 
 /**
  * 抽象业务责任链组件
-
  */
 public interface AbstractChainHandler<T> extends Ordered {
 

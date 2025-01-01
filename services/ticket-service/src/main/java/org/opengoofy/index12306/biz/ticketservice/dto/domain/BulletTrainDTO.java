@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 动车实体
-
  */
 @Data
 public class BulletTrainDTO {

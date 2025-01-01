@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.idempotent.enums;
 
 /**
  * 幂等验证场景枚举
-
  */
 public enum IdempotentSceneEnum {
 

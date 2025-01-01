@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 用户查询返回无脱敏参数
- 
  */
 @Data
 public class UserQueryActualRespDTO {

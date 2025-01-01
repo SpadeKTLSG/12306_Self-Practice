@@ -26,7 +26,6 @@ import java.math.BigDecimal;
 
 /**
  * 支付宝支付请求入参
-
  */
 @Data
 @Accessors(chain = true)

@@ -28,7 +28,6 @@ import java.util.Date;
 
 /**
  * 订单数据库实体
-
  */
 @Data
 @TableName("t_order")

@@ -27,7 +27,6 @@ import org.springframework.messaging.Message;
 
 /**
  * RocketMQ 抽象公共发送消息组件
- 
  */
 @Slf4j
 @RequiredArgsConstructor

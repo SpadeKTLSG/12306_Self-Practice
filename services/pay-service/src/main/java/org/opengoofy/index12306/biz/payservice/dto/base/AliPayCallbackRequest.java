@@ -24,7 +24,6 @@ import java.util.Date;
 
 /**
  * 支付宝回调请求入参
- 
  */
 @Data
 public final class AliPayCallbackRequest extends AbstractPayCallbackRequest {

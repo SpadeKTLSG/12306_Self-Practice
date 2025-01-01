@@ -27,7 +27,6 @@ import java.math.BigDecimal;
 
 /**
  * 支付宝退款请求入参
- 
  */
 @Data
 @Accessors(chain = true)

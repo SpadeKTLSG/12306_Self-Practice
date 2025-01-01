@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.idempotent.annotation.Idempote
 
 /**
  * 幂等执行处理器
-
  */
 public interface IdempotentExecuteHandler {
 

@@ -26,7 +26,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 乘车人订单关系实体
-
  */
 @Data
 @Builder

@@ -22,7 +22,6 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * 车票状态枚举
-
  */
 @RequiredArgsConstructor
 public enum TicketStatusEnum {

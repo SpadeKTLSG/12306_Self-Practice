@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.designpattern.chain.AbstractCh
 
 /**
  * 列车车票查询过滤器
-
  */
 public interface TrainTicketQueryChainFilter<T extends TicketPageQueryReqDTO> extends AbstractChainHandler<TicketPageQueryReqDTO> {
 

@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.distributedid.handler.IdGenera
 
 /**
  * 分布式雪花 ID 生成器
-
  */
 public final class SnowflakeIdUtil {
 

@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 购票乘车人详情实体
- 
  */
 @Data
 public class PurchaseTicketPassengerDetailDTO {

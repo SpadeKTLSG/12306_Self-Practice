@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 用户信息实体
-
  */
 @Data
 @TableName("t_user")

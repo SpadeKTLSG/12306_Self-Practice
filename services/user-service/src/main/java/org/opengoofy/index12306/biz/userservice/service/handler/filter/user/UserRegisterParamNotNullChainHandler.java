@@ -26,7 +26,6 @@ import java.util.Objects;
 
 /**
  * 用户注册参数必填检验
-
  */
 @Component
 public final class UserRegisterParamNotNullChainHandler implements UserRegisterCreateChainFilter<UserRegisterReqDTO> {

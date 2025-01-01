@@ -19,11 +19,9 @@ package org.opengoofy.index12306.biz.payservice.dto.base;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.opengoofy.index12306.framework.starter.distributedid.toolkit.SnowflakeIdUtil;
 
 /**
  * 抽象退款入参实体
-
  */
 public abstract class AbstractRefundRequest implements RefundRequest {
 

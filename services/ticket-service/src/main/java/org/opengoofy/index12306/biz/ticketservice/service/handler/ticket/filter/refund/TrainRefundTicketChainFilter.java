@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.designpattern.chain.AbstractCh
 
 /**
  * 列车车票退款过滤器
- 
  */
 public interface TrainRefundTicketChainFilter<T extends RefundTicketReqDTO> extends AbstractChainHandler<RefundTicketReqDTO> {
 

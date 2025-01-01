@@ -22,7 +22,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 缓存穿透布隆过滤器
-
  */
 @Data
 @ConfigurationProperties(prefix = BloomFilterPenetrateProperties.PREFIX)

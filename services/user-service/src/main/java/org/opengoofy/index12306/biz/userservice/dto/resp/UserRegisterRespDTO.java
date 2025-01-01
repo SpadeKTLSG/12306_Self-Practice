@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 用户注册返回参数
-
  */
 @Data
 public class UserRegisterRespDTO {

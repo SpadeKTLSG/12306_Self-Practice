@@ -24,7 +24,6 @@ import java.util.Map;
 
 /**
  * 幂等上下文
-
  */
 public final class IdempotentContext {
 

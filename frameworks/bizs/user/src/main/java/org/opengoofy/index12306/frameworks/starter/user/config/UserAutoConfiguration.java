@@ -26,7 +26,6 @@ import static org.opengoofy.index12306.framework.starter.bases.constant.FilterOr
 
 /**
  * 用户配置自动装配
-
  */
 @ConditionalOnWebApplication
 public class UserAutoConfiguration {

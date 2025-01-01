@@ -24,7 +24,6 @@ import org.opengoofy.index12306.biz.userservice.dto.resp.UserQueryRespDTO;
 
 /**
  * 用户信息接口层
-
  */
 public interface UserService {
 

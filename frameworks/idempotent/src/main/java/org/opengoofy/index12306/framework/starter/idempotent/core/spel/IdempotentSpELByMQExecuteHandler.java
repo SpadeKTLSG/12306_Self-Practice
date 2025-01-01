@@ -38,7 +38,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 基于 SpEL 方法验证请求幂等性，适用于 MQ 场景
-
  */
 @RequiredArgsConstructor
 public final class IdempotentSpELByMQExecuteHandler extends AbstractIdempotentExecuteHandler implements IdempotentSpELService {

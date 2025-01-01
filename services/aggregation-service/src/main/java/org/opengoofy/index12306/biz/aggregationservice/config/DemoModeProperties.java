@@ -25,7 +25,6 @@ import java.util.List;
 
 /**
  * 演示环境配置属性
-
  */
 @Data
 @Component

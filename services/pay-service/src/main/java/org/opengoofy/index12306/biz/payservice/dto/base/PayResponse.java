@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 支付返回
-
  */
 @Data
 @NoArgsConstructor

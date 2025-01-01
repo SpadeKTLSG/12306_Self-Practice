@@ -36,7 +36,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 支付结果回调订单消费者
-
  */
 @Slf4j
 @Component

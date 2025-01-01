@@ -21,7 +21,6 @@ import lombok.Data;
 
 /**
  * 普通车实体
-
  */
 @Data
 public class RegularTrainDTO {

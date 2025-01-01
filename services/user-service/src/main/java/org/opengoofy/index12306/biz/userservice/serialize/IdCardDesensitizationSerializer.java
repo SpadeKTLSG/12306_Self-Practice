@@ -26,7 +26,6 @@ import java.io.IOException;
 
 /**
  * 身份证号脱敏反序列化
-
  */
 public class IdCardDesensitizationSerializer extends JsonSerializer<String> {
 

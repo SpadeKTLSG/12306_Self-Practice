@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 幂等属性配置
- 
  */
 @Data
 @ConfigurationProperties(prefix = IdempotentProperties.PREFIX)

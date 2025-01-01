@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.convention.page.PageRequest;
 
 /**
  * 车票订单分页查询
-
  */
 @Data
 public class TicketOrderPageQueryReqDTO extends PageRequest {

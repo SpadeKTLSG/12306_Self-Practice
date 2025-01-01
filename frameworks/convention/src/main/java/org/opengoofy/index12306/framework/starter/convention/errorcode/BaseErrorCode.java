@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.convention.errorcode;
 
 /**
  * 基础错误码定义
-
  */
 public enum BaseErrorCode implements IErrorCode {
 

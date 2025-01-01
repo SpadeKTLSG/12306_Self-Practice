@@ -27,7 +27,6 @@ import java.util.Date;
 
 /**
  * 本人车票订单详情返回参数
-
  */
 @Data
 @NoArgsConstructor

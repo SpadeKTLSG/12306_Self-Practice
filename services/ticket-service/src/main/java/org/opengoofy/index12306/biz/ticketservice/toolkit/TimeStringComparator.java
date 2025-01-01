@@ -25,7 +25,6 @@ import java.util.Comparator;
 
 /**
  * 自定义时间比较器
-
  */
 public class TimeStringComparator implements Comparator<TicketListDTO> {
 

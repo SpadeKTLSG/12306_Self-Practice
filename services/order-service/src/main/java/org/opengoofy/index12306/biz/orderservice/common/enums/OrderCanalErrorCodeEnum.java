@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.convention.errorcode.IErrorCod
 
 /**
  * 订单取消错误码枚举
-
  */
 @AllArgsConstructor
 public enum OrderCanalErrorCodeEnum implements IErrorCode {

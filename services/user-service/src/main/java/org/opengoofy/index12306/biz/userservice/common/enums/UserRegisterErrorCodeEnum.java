@@ -22,7 +22,6 @@ import org.opengoofy.index12306.framework.starter.convention.errorcode.IErrorCod
 
 /**
  * 用户注册错误码枚举
-
  */
 @AllArgsConstructor
 public enum UserRegisterErrorCodeEnum implements IErrorCode {

@@ -34,14 +34,12 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
  * 基于方法参数验证请求幂等性
- 
  */
 @RequiredArgsConstructor
 public final class IdempotentParamExecuteHandler extends AbstractIdempotentExecuteHandler implements IdempotentParamService {
 
-    private final RedissonClient redissonClient;
-
     private final static String LOCK = "lock:param:restAPI";
+    private final RedissonClient redissonClient;
 
     @Override
     protected IdempotentParamWrapper buildWrapper(ProceedingJoinPoint joinPoint) {
@@ -62,7 +60,7 @@ public final class IdempotentParamExecuteHandler extends AbstractIdempotentExecu
      */
     private String getCurrentUserId() {
         String userId = UserContext.getUserId();
-        if(StrUtil.isBlank(userId)){
+        if (StrUtil.isBlank(userId)) {
             throw new ClientException("用户ID获取失败，请登录");
         }
         return userId;

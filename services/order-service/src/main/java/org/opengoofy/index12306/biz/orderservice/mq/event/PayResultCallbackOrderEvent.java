@@ -26,7 +26,6 @@ import java.util.Date;
 
 /**
  * 支付结果回调订单服务事件
-
  */
 @Data
 @NoArgsConstructor

@@ -24,16 +24,8 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.opengoofy.index12306.biz.userservice.common.enums.UserChainMarkEnum;
-import org.opengoofy.index12306.biz.userservice.dao.entity.UserDO;
-import org.opengoofy.index12306.biz.userservice.dao.entity.UserDeletionDO;
-import org.opengoofy.index12306.biz.userservice.dao.entity.UserMailDO;
-import org.opengoofy.index12306.biz.userservice.dao.entity.UserPhoneDO;
-import org.opengoofy.index12306.biz.userservice.dao.entity.UserReuseDO;
-import org.opengoofy.index12306.biz.userservice.dao.mapper.UserDeletionMapper;
-import org.opengoofy.index12306.biz.userservice.dao.mapper.UserMailMapper;
-import org.opengoofy.index12306.biz.userservice.dao.mapper.UserMapper;
-import org.opengoofy.index12306.biz.userservice.dao.mapper.UserPhoneMapper;
-import org.opengoofy.index12306.biz.userservice.dao.mapper.UserReuseMapper;
+import org.opengoofy.index12306.biz.userservice.dao.entity.*;
+import org.opengoofy.index12306.biz.userservice.dao.mapper.*;
 import org.opengoofy.index12306.biz.userservice.dto.req.UserDeletionReqDTO;
 import org.opengoofy.index12306.biz.userservice.dto.req.UserLoginReqDTO;
 import org.opengoofy.index12306.biz.userservice.dto.req.UserRegisterReqDTO;
@@ -62,18 +54,12 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
-import static org.opengoofy.index12306.biz.userservice.common.constant.RedisKeyConstant.LOCK_USER_REGISTER;
-import static org.opengoofy.index12306.biz.userservice.common.constant.RedisKeyConstant.USER_DELETION;
-import static org.opengoofy.index12306.biz.userservice.common.constant.RedisKeyConstant.USER_REGISTER_REUSE_SHARDING;
-import static org.opengoofy.index12306.biz.userservice.common.enums.UserRegisterErrorCodeEnum.HAS_USERNAME_NOTNULL;
-import static org.opengoofy.index12306.biz.userservice.common.enums.UserRegisterErrorCodeEnum.MAIL_REGISTERED;
-import static org.opengoofy.index12306.biz.userservice.common.enums.UserRegisterErrorCodeEnum.PHONE_REGISTERED;
-import static org.opengoofy.index12306.biz.userservice.common.enums.UserRegisterErrorCodeEnum.USER_REGISTER_FAIL;
+import static org.opengoofy.index12306.biz.userservice.common.constant.RedisKeyConstant.*;
+import static org.opengoofy.index12306.biz.userservice.common.enums.UserRegisterErrorCodeEnum.*;
 import static org.opengoofy.index12306.biz.userservice.toolkit.UserReuseUtil.hashShardingIdx;
 
 /**
  * 用户登录接口实现
-
  */
 @Slf4j
 @Service

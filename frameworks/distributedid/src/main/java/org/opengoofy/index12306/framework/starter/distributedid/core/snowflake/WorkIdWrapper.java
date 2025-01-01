@@ -23,7 +23,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * WorkId 包装器
-
  */
 @Data
 @NoArgsConstructor

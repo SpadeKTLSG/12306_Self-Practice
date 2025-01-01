@@ -26,7 +26,6 @@ import java.util.PriorityQueue;
 
 /**
  * 座位统计工具类
- 
  */
 public final class CarriageVacantSeatCalculateUtil {
 

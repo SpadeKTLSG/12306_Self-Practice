@@ -27,7 +27,6 @@ import java.util.Objects;
 
 /**
  * 支付回调请求入参转换器
-
  */
 public final class PayCallbackRequestConvert {
 

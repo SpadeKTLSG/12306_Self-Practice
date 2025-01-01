@@ -23,7 +23,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 取消车票订单请求入参
- 
  */
 @Data
 @NoArgsConstructor

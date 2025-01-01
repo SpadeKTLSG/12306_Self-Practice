@@ -22,7 +22,6 @@ import lombok.Getter;
 
 /**
  * 用户注册错误码枚举
-
  */
 @AllArgsConstructor
 public enum VerifyStatusEnum {

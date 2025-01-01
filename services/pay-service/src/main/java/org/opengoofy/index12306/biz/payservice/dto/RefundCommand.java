@@ -24,7 +24,6 @@ import java.math.BigDecimal;
 
 /**
  * 退款请求命令
-
  */
 @Data
 public final class RefundCommand extends AbstractRefundRequest {

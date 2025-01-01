@@ -28,7 +28,6 @@ import org.opengoofy.index12306.biz.orderservice.serialize.IdCardDesensitization
 
 /**
  * 车票订单详情返回参数
- 
  */
 @Data
 @Builder

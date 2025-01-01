@@ -22,7 +22,6 @@ import org.opengoofy.index12306.biz.userservice.dao.entity.UserDO;
 
 /**
  * 用户信息持久层
-
  */
 public interface UserMapper extends BaseMapper<UserDO> {
 

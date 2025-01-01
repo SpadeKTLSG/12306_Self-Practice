@@ -23,7 +23,6 @@ import java.util.Date;
 
 /**
  * 支付单详情信息返回参数
-
  */
 @Data
 public class PayInfoRespDTO {

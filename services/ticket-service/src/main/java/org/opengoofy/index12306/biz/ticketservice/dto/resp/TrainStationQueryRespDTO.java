@@ -24,7 +24,6 @@ import java.util.Date;
 
 /**
  * 列车站点查询响应参数
-
  */
 @Data
 public class TrainStationQueryRespDTO {

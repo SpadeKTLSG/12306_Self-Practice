@@ -24,7 +24,6 @@ import java.util.List;
 
 /**
  * 车票订单创建请求参数
-
  */
 @Data
 public class TicketOrderCreateReqDTO {

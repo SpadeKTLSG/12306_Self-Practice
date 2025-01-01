@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 订单状态反转实体
- 
  */
 @Data
 @Builder

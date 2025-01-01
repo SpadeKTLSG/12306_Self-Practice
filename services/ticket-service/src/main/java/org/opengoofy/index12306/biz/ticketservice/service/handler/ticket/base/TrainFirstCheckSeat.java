@@ -28,7 +28,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 高铁一等座验证座位
-
  */
 public class TrainFirstCheckSeat implements TrainBitMapCheckSeat {
 

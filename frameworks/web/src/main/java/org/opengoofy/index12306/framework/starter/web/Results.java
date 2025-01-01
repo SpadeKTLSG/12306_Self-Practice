@@ -25,7 +25,6 @@ import java.util.Optional;
 
 /**
  * 全局返回对象构造器
-
  */
 public final class Results {
 

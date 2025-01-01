@@ -25,7 +25,6 @@ import java.util.Date;
 
 /**
  * 车票分页查询请求参数
-
  */
 @Data
 public class TicketPageQueryReqDTO extends PageRequest {

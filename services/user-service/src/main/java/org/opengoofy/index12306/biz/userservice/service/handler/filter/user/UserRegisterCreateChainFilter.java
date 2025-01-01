@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.designpattern.chain.AbstractCh
 
 /**
  * 用户注册责任链过滤器
-
  */
 public interface UserRegisterCreateChainFilter<T extends UserRegisterReqDTO> extends AbstractChainHandler<UserRegisterReqDTO> {
 

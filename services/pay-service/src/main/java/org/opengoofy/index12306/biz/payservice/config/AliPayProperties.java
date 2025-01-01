@@ -23,7 +23,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 支付宝配置
-
  */
 @Data
 @Configuration

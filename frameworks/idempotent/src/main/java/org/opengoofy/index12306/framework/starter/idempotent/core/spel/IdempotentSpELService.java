@@ -21,7 +21,6 @@ import org.opengoofy.index12306.framework.starter.idempotent.core.IdempotentExec
 
 /**
  * SpEL 方式幂等实现接口
-
  */
 public interface IdempotentSpELService extends IdempotentExecuteHandler {
 }

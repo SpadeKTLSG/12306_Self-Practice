@@ -26,7 +26,6 @@ import java.util.List;
 
 /**
  * 座位持久层
-
  */
 public interface SeatMapper extends BaseMapper<SeatDO> {
 

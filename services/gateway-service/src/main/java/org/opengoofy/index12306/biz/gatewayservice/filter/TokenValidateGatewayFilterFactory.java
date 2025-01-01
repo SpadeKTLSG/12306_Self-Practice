@@ -36,19 +36,18 @@ import java.util.Objects;
 
 /**
  * SpringCloud Gateway Token 拦截器
- 
  */
 @Component
 public class TokenValidateGatewayFilterFactory extends AbstractGatewayFilterFactory<Config> {
-
-    public TokenValidateGatewayFilterFactory() {
-        super(Config.class);
-    }
 
     /**
      * 注销用户时需要传递 Token
      */
     public static final String DELETION_PATH = "/api/user-service/deletion";
+
+    public TokenValidateGatewayFilterFactory() {
+        super(Config.class);
+    }
 
     @Override
     public GatewayFilter apply(Config config) {

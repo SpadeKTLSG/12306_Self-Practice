@@ -24,21 +24,12 @@ import java.util.stream.Collectors;
 
 /**
  * 座位转换工具类
-
  */
 public final class ChooseSeatUtil {
 
     public static final String TRAIN_BUSINESS = "TRAIN_BUSINESS";
     public static final String TRAIN_FIRST = "TRAIN_FIRST";
     public static final String TRAIN_SECOND = "TRAIN_SECOND";
-
-    interface StrPool {
-        String A = "A";
-        String B = "B";
-        String C = "C";
-        String D = "D";
-        String F = "F";
-    }
 
     /**
      * 选座座位分类 convert
@@ -47,8 +38,8 @@ public final class ChooseSeatUtil {
      * @param chooseSeatList 选座座位集合
      * @return 选择座位位置 Map
      */
-    public static HashMap<Integer,Integer> convert(String mark, List<String> chooseSeatList) {
-       HashMap<Integer, Integer> actualChooseSeatMap = new HashMap<>(8);
+    public static HashMap<Integer, Integer> convert(String mark, List<String> chooseSeatList) {
+        HashMap<Integer, Integer> actualChooseSeatMap = new HashMap<>(8);
         Map<String, List<String>> chooseSeatMap = chooseSeatList
                 .stream()
                 .collect(Collectors.groupingBy(seat -> seat.substring(0, 1)));
@@ -81,5 +72,13 @@ public final class ChooseSeatUtil {
             }
         });
         return actualChooseSeatMap;
+    }
+
+    interface StrPool {
+        String A = "A";
+        String B = "B";
+        String C = "C";
+        String D = "D";
+        String F = "F";
     }
 }

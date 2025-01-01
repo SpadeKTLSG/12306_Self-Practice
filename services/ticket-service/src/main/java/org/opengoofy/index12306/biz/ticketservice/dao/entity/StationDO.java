@@ -23,7 +23,6 @@ import org.opengoofy.index12306.framework.starter.database.base.BaseDO;
 
 /**
  * 车站实体
- 
  */
 @Data
 @TableName("t_station")

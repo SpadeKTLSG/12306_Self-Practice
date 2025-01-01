@@ -30,21 +30,18 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.opengoofy.index12306.framework.starter.bases.constant.UserConstant.REAL_NAME_KEY;
-import static org.opengoofy.index12306.framework.starter.bases.constant.UserConstant.USER_ID_KEY;
-import static org.opengoofy.index12306.framework.starter.bases.constant.UserConstant.USER_NAME_KEY;
+import static org.opengoofy.index12306.framework.starter.bases.constant.UserConstant.*;
 
 /**
  * JWT 工具类
-
  */
 @Slf4j
 public final class JWTUtil {
 
-    private static final long EXPIRATION = 86400L;
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String ISS = "index12306";
     public static final String SECRET = "SecretKey039245678901232039487623456783092349288901402967890140939827";
+    private static final long EXPIRATION = 86400L;
 
     /**
      * 生成用户 Token

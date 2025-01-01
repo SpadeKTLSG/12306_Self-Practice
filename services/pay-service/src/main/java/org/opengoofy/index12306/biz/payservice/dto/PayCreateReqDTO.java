@@ -23,7 +23,6 @@ import java.util.Date;
 
 /**
  * 支付单创建请求参数
- 
  */
 @Data
 public class PayCreateReqDTO {

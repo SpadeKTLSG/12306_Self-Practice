@@ -41,11 +41,11 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 /**
  * 订单明细接口层实现
-
  */
 @Slf4j
 @Service

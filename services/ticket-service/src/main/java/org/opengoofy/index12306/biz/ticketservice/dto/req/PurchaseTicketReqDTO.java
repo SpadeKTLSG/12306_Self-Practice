@@ -24,7 +24,6 @@ import java.util.List;
 
 /**
  * 购票请求入参
-
  */
 @Data
 public class PurchaseTicketReqDTO {

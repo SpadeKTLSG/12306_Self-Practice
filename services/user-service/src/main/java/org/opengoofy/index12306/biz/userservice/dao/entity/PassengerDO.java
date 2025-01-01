@@ -28,7 +28,6 @@ import java.util.Date;
 
 /**
  * 乘车人实体
-
  */
 @Data
 @TableName("t_passenger")

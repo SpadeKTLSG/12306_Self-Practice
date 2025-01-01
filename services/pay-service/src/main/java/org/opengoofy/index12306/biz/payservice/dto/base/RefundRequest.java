@@ -17,11 +17,8 @@
 
 package org.opengoofy.index12306.biz.payservice.dto.base;
 
-import java.math.BigDecimal;
-
 /**
  * 退款入参接口
-
  */
 public interface RefundRequest {
 

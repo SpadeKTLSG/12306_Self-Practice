@@ -19,7 +19,6 @@ package org.opengoofy.index12306.framework.starter.bases.constant;
 
 /**
  * 全局过滤器顺序执行常量类
-
  */
 public final class FilterOrderConstant {
 

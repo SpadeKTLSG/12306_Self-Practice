@@ -19,26 +19,17 @@ package org.opengoofy.index12306.biz.payservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.opengoofy.index12306.biz.payservice.convert.PayRequestConvert;
-import org.opengoofy.index12306.biz.payservice.dto.PayCommand;
-import org.opengoofy.index12306.biz.payservice.dto.PayInfoRespDTO;
-import org.opengoofy.index12306.biz.payservice.dto.PayRespDTO;
-import org.opengoofy.index12306.biz.payservice.dto.RefundReqDTO;
-import org.opengoofy.index12306.biz.payservice.dto.RefundRespDTO;
+import org.opengoofy.index12306.biz.payservice.dto.*;
 import org.opengoofy.index12306.biz.payservice.dto.base.PayRequest;
 import org.opengoofy.index12306.biz.payservice.service.PayService;
 import org.opengoofy.index12306.framework.starter.convention.result.Result;
 import org.opengoofy.index12306.framework.starter.idempotent.annotation.Idempotent;
 import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentTypeEnum;
 import org.opengoofy.index12306.framework.starter.web.Results;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 支付控制层
- 
  */
 @RestController
 @RequiredArgsConstructor

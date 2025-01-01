@@ -25,7 +25,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 购票服务应用启动器
-
  */
 @SpringBootApplication
 @EnableDynamicThreadPool

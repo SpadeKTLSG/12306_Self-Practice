@@ -29,17 +29,12 @@ import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentSce
 import org.opengoofy.index12306.framework.starter.idempotent.enums.IdempotentTypeEnum;
 import org.opengoofy.index12306.framework.starter.web.Results;
 import org.opengoofy.index12306.frameworks.starter.user.core.UserContext;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
  * 乘车人控制层
-
  */
 @RestController
 @RequiredArgsConstructor

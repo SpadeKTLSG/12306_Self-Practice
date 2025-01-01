@@ -22,7 +22,6 @@ import java.util.Map;
 
 /**
  * 座位号转换工具
- 
  */
 public final class SeatNumberUtil {
 
