@@ -61,13 +61,6 @@
             <artifactId>index12306-base-spring-boot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.opengoofy.index12306</groupId>
-            <artifactId>index12306-log-spring-boot-starter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>com.xuxueli</groupId>
             <artifactId>xxl-job-core</artifactId>
