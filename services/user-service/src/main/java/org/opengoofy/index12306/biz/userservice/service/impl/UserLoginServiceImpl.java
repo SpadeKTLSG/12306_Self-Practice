@@ -75,24 +75,23 @@ public class UserLoginServiceImpl implements UserLoginService {
         }
         String username;
         if (mailFlag) {
-            LambdaQueryWrapper<UserMailDO> queryWrapper = Wrappers.lambdaQuery(UserMailDO.class)
-                    .eq(UserMailDO::getMail, usernameOrMailOrPhone);
-            username = Optional.ofNullable(userMailMapper.selectOne(queryWrapper))
+            username = Optional.ofNullable(userMailMapper.selectOne(Wrappers.lambdaQuery(UserMailDO.class)
+                            .eq(UserMailDO::getMail, usernameOrMailOrPhone)))
                     .map(UserMailDO::getUsername)
                     .orElseThrow(() -> new ClientException("用户名/手机号/邮箱不存在"));
         } else {
-            LambdaQueryWrapper<UserPhoneDO> queryWrapper = Wrappers.lambdaQuery(UserPhoneDO.class)
-                    .eq(UserPhoneDO::getPhone, usernameOrMailOrPhone);
-            username = Optional.ofNullable(userPhoneMapper.selectOne(queryWrapper))
+            username = Optional.ofNullable(userPhoneMapper.selectOne(Wrappers.lambdaQuery(UserPhoneDO.class)
+                            .eq(UserPhoneDO::getPhone, usernameOrMailOrPhone)))
                     .map(UserPhoneDO::getUsername)
                     .orElse(null);
         }
         username = Optional.ofNullable(username).orElse(requestParam.getUsernameOrMailOrPhone());
-        LambdaQueryWrapper<UserDO> queryWrapper = Wrappers.lambdaQuery(UserDO.class)
+
+        UserDO userDO = userMapper.selectOne(Wrappers.lambdaQuery(UserDO.class)
                 .eq(UserDO::getUsername, username)
                 .eq(UserDO::getPassword, requestParam.getPassword())
-                .select(UserDO::getId, UserDO::getUsername, UserDO::getRealName);
-        UserDO userDO = userMapper.selectOne(queryWrapper);
+                .select(UserDO::getId, UserDO::getUsername, UserDO::getRealName));
+
         if (userDO != null) {
             UserInfoDTO userInfo = UserInfoDTO.builder()
                     .userId(String.valueOf(userDO.getId()))
@@ -187,11 +186,14 @@ public class UserLoginServiceImpl implements UserLoginService {
     public void deletion(UserDeletionReqDTO requestParam) {
         String username = UserContext.getUsername();
         if (!Objects.equals(username, requestParam.getUsername())) {
-            // 此处严谨来说，需要上报风控中心进行异常检测
+
+            // 此处未来需要上报风控中心进行异常检测
             throw new ClientException("注销账号与登录账号不一致");
         }
         RLock lock = redissonClient.getLock(USER_DELETION + requestParam.getUsername());
-        // 加锁为什么放在 try 语句外？https://www.yuque.com/magestack/12306/pu52u29i6eb1c5wh
+        // 加锁为什么放在 try 语句外？
+        // 加锁失败后，直接抛出异常，不需要执行 finally 语句
+        // 当然, 也可以放在 try 语句内, 加上一个catch 处理异常并手动抛出等
         lock.lock();
         try {
             UserQueryRespDTO userQueryRespDTO = userService.queryUserByUsername(username);
@@ -203,13 +205,15 @@ public class UserLoginServiceImpl implements UserLoginService {
             UserDO userDO = new UserDO();
             userDO.setDeletionTime(System.currentTimeMillis());
             userDO.setUsername(username);
-            // MyBatis Plus 不支持修改语句变更 del_flag 字段
+            // MyBatis Plus 不支持修改语句变更 del_flag 字段, 需要手动编写 SQL; 当然, 如果自己实现逻辑删除就简单了
             userMapper.deletionUser(userDO);
+
             UserPhoneDO userPhoneDO = UserPhoneDO.builder()
                     .phone(userQueryRespDTO.getPhone())
                     .deletionTime(System.currentTimeMillis())
                     .build();
             userPhoneMapper.deletionUser(userPhoneDO);
+
             if (StrUtil.isNotBlank(userQueryRespDTO.getMail())) {
                 UserMailDO userMailDO = UserMailDO.builder()
                         .mail(userQueryRespDTO.getMail())
@@ -217,8 +221,10 @@ public class UserLoginServiceImpl implements UserLoginService {
                         .build();
                 userMailMapper.deletionUser(userMailDO);
             }
+
             distributedCache.delete(UserContext.getToken());
             userReuseMapper.insert(new UserReuseDO(username));
+
             StringRedisTemplate instance = (StringRedisTemplate) distributedCache.getInstance();
             instance.opsForSet().add(USER_REGISTER_REUSE_SHARDING + hashShardingIdx(username), username);
         } finally {
